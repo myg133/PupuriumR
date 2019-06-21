@@ -28,21 +28,21 @@ macro_rules! utf8 {
     };
 }
 
-static mut AUTH_CODE: i32 = 0;
-
-const client: cqpsdk::Client = cqpsdk::Client::new("com.mi.test");
+static mut client: cqpsdk::Client = cqpsdk::Client::new("com.mi.test");
 
 // https://github.com/rust-lang/rust/issues/17806
 
 #[export_name = "AppInfo"]
 pub extern "stdcall" fn app_info() -> *const i8 {
-    return gbk!(client.app_info().as_str());
+    unsafe{
+        return gbk!(client.app_info().as_str());
+    }
 }
 
 #[export_name = "Initialize"]
 pub extern "stdcall" fn initialize(AuthCode: i32) -> i32 {
     unsafe {
-        AUTH_CODE = AuthCode;
+        client.initialize(AuthCode);
     }
     return cqpsdk::EVENT_IGNORE;
 }
