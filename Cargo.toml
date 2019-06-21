@@ -1,6 +1,6 @@
 [package]
 
-name = "pupurium_r"
+name = "pupurium_test"
 version = "0.1.0"
 authors = [ "evshiron", "doylecnn", "myg133" ]
 links = "CQP"
@@ -15,6 +15,6 @@ git = "https://github.com/myg133/cqpsdk-rust"
 
 [lib]
 
-name = "pupurium_r"
+name = "app"
 crate-type = [ "dylib" ]
 

@@ -1,0 +1,30 @@
+{
+    "ret": 1,
+    "appid": "com.mi.test",
+    "name": "for_test",
+    "apiver": 9,
+    "version": "0.1.0",
+    "version_id": 1,
+    "author": "myg133",
+    "description": "test",
+    "event": [
+        {
+            "id": 1,
+            "type": 21,
+            "name": "PrivateMessageHandler",
+            "function": "PrivateMessageHandler",
+            "priority": 30000
+        },
+        {
+            "id": 2,
+            "type": 2,
+            "name": "GroupMessageHandler",
+            "function": "GroupMessageHandler",
+            "priority": 20000
+        }
+    ],
+    "auth": [
+        101,
+        161
+    ]
+}
