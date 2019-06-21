@@ -2,8 +2,6 @@
 
 SET APPID=com.mi.test
 
-ECHO %APPID%
-
 cargo build --target i686-pc-windows-msvc
 
 mkdir dist\%APPID%
