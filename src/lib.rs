@@ -56,6 +56,7 @@ pub extern "stdcall" fn private_message_handler(
     font: i32,
 ) -> i32 {
     unsafe{
+        client.add_log(cqpsdk::LogLevel::Debug, "test", utf8!(msg));
         return client.send_private_message(qqNum, utf8!(msg));
     }
 }
