@@ -2,7 +2,7 @@
 
 name = "pupurium_r"
 version = "0.1.0"
-authors = [ "evshiron", "doylecnn" ]
+authors = [ "evshiron", "doylecnn", "myg133" ]
 links = "CQP"
 build = "build.rs"
 
@@ -10,7 +10,8 @@ build = "build.rs"
 encoding = "*"
 
 [dependencies.cqpsdk]
-git = "https://github.com/evshiron/cqpsdk-rust"
+git = "https://github.com/myg133/cqpsdk-rust"
+# path = "../cqpsdk-rust"
 
 [lib]
 
